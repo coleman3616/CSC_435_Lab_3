@@ -1,0 +1,26 @@
+1.
+library('tidyverse')
+df <- Lab4_ZipCard_Data %>% filter(GENDER != "Unknown")
+t.test(TRANSACTION_AMOUNT ~ GENDER, data = df, var.equal = TRUE)
+
+	Two Sample t-test
+
+data:  TRANSACTION_AMOUNT by GENDER
+t = -3.4369, df = 24044, p-value = 0.0005893
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -40.86309 -11.18207
+sample estimates:
+mean in group Female   mean in group Male 
+            269.2269             295.2495 
+			
+2
+
+
+
+
+3
+
+
+4
+d4 <- df %>% filter(ACAD_LOAD %in% c("Three Quarter Time", "Enrolled Half-Time", "Enrolled Full-Time"))
